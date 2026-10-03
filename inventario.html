@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Inventario · Repuestos Paola</title>
+    <link rel="icon" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body data-page="inventario">
+    <header class="cab">
+        <div class="wrap"><a class="marca" href="index.html"><img src="img/logo.svg"
+                    alt="Logo Paola"><span><b>Paola</b><small>Repuestos y autopartes</small></span></a>
+            <nav class="menu" aria-label="Principal"><a href="index.html">Inicio</a><a href="inventario.html"
+                    class=on>Inventario</a><a href="modelos.html">Modelos</a><a
+                    href="movimientos.html">Movimientos</a><a href="proveedores.html">Proveedores</a></nav>
+        </div>
+    </header>
+    <section class="page-t">
+        <div class="wrap">
+            <h1>Inventario</h1>
+            <p>Busca, filtra por modelo y ajusta existencias.</p>
+        </div>
+    </section>
+    <main>
+        <div class="wrap">
+            <div id="kpis" class="kpis" style="margin-top:0"></div>
+            <h2>Repuestos</h2>
+            <div class="barra"><input id="q" type="search" placeholder="Buscar por nombre, código o categoría"
+                    aria-label="Buscar"><select id="fm" aria-label="Filtrar por modelo"></select></div>
+            <div class="tabla-w">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Repuesto</th>
+                            <th>Categoría</th>
+                            <th>Modelos compatibles</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="tb"></tbody>
+                </table>
+            </div>
+            <h2>Agregar repuesto</h2>
+            <form class="alta" id="alta"><label>Nombre<input name="n" required></label><label>Categoría<select
+                        name="cat">
+                        <option>Motor</option>
+                        <option>Frenos</option>
+                        <option>Suspensión</option>
+                        <option>Eléctrico</option>
+                        <option>Transmisión</option>
+                        <option>Carrocería</option>
+                        <option>Refrigeración</option>
+                    </select></label>
+                <label>Modelos (Ctrl para varios)<select id="mchk" multiple size="4"></select></label><label>Stock
+                    inicial<input name="s" type="number" min="0" value="0" required></label><label>Stock mínimo<input
+                        name="min" type="number" min="0" value="5" required></label><label>Precio<input name="p"
+                        type="number" min="0" step="0.01" value="0" required></label><button class="btn az"
+                    type="submit">Guardar repuesto</button>
+            </form>
+        </div>
+    </main>
+    <footer class="pie">
+        <div class="wrap"><img src="img/logo.svg" alt="Logo Paola"><span><b>Paola</b><small>Control de inventario de
+                    repuestos · Autos y camionetas</small></span>
+            <nav aria-label="Pie"><a href="index.html">Inicio</a><a href="inventario.html">Inventario</a><a
+                    href="modelos.html">Modelos</a><a href="movimientos.html">Movimientos</a><a
+                    href="proveedores.html">Proveedores</a></nav>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

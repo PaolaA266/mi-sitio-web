@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Inicio · Repuestos Paola</title>
+    <link rel="icon" href="img/logo.svg">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body data-page="inicio">
+    <header class="cab">
+        <div class="wrap"><a class="marca" href="index.html"><img src="img/logo.svg"
+                    alt="Logo Paola"><span><b>Paola</b><small>Repuestos y autopartes</small></span></a>
+            <nav class="menu" aria-label="Principal"><a href="index.html" class=on>Inicio</a><a
+                    href="inventario.html">Inventario</a><a href="modelos.html">Modelos</a><a
+                    href="movimientos.html">Movimientos</a><a href="proveedores.html">Proveedores</a></nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="wrap">
+            <h1>Control de inventario de repuestos para autos</h1>
+            <p>Consulta existencias por modelo, detecta faltantes y registra cada entrada o salida de bodega.</p>
+            <div class="btns"><a class="btn" href="inventario.html">Abrir inventario</a><a class="btn sec"
+                    href="modelos.html">Ver modelos</a></div>
+        </div>
+    </section>
+    <main>
+        <div class="wrap">
+            <div id="kpis" class="kpis"></div>
+            <h2>Modelos que atendemos</h2>
+            <div id="modelos" class="tarjetas"></div>
+            <h2>Repuestos por reponer</h2>
+            <div class="tabla-w">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Código</th>
+                            <th>Repuesto</th>
+                            <th>Categoría</th>
+                            <th>Modelos</th>
+                            <th>Precio</th>
+                            <th>Stock</th>
+                            <th>Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bajos"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+    <footer class="pie">
+        <div class="wrap"><img src="img/logo.svg" alt="Logo Paola"><span><b>Paola</b><small>Control de inventario de
+                    repuestos · Autos y camionetas</small></span>
+            <nav aria-label="Pie"><a href="index.html">Inicio</a><a href="inventario.html">Inventario</a><a
+                    href="modelos.html">Modelos</a><a href="movimientos.html">Movimientos</a><a
+                    href="proveedores.html">Proveedores</a></nav>
+        </div>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

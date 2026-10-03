@@ -1,0 +1,444 @@
+:root {
+    --navy: #0a2a5e;
+    --blue: #1456c9;
+    --sky: #4da3ff;
+    --ice: #eaf2fe;
+    --line: #cfdcf1;
+    --ink: #0d1b33;
+    --mute: #51627f;
+    --ok: #12805c;
+    --warn: #c47a00;
+    --bad: #c0322b;
+    --bg: #f4f8ff
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.55
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+.wrap {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 clamp(16px, 4vw, 56px)
+}
+
+:focus-visible {
+    outline: 3px solid var(--sky);
+    outline-offset: 2px
+}
+
+/* cabecera: el logo domina */
+.cab {
+    background: linear-gradient(100deg, var(--navy), var(--blue));
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 14px rgba(10, 42, 94, .35)
+}
+
+.cab .wrap {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    min-height: 104px;
+    flex-wrap: wrap
+}
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 16px
+}
+
+.marca img {
+    height: 84px;
+    width: auto;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .35))
+}
+
+.marca small {
+    display: block;
+    font-size: .8rem;
+    opacity: .85;
+    letter-spacing: .02em
+}
+
+.marca b {
+    font-size: 1.1rem;
+    font-weight: 600
+}
+
+.menu {
+    display: flex;
+    gap: 6px;
+    margin-left: auto;
+    flex-wrap: wrap
+}
+
+.menu a {
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: .95rem;
+    color: #dbe8ff
+}
+
+.menu a:hover {
+    background: rgba(255, 255, 255, .14);
+    color: #fff
+}
+
+.menu a.on {
+    background: #fff;
+    color: var(--navy)
+}
+
+/* portada */
+.hero {
+    background: linear-gradient(rgba(10, 42, 94, .55), rgba(10, 42, 94, .8)), url(../img/proyecto.jpg) center/cover;
+    color: #fff;
+    padding: 72px 0 64px
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 4.4vw, 3.4rem);
+    line-height: 1.1;
+    max-width: 20ch;
+    margin-bottom: 16px
+}
+
+.hero p {
+    max-width: 60ch;
+    color: #dbe8ff;
+    font-size: 1.1rem
+}
+
+.btns {
+    display: flex;
+    gap: 12px;
+    margin-top: 26px;
+    flex-wrap: wrap
+}
+
+.btn {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    padding: 11px 22px;
+    border-radius: 8px;
+    background: var(--sky);
+    color: var(--navy)
+}
+
+.btn:hover {
+    background: #7bbbff
+}
+
+.btn.sec {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .6)
+}
+
+.btn.az {
+    background: var(--blue);
+    color: #fff
+}
+
+.btn.az:hover {
+    background: var(--navy)
+}
+
+.page-t {
+    background: var(--navy);
+    color: #fff;
+    padding: 36px 0
+}
+
+.page-t h1 {
+    font-size: 2rem
+}
+
+.page-t p {
+    color: #b9d1fa
+}
+
+main {
+    padding: 36px 0 64px
+}
+
+h2 {
+    font-size: 1.35rem;
+    color: var(--navy);
+    margin: 34px 0 14px
+}
+
+.kpis {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: -34px;
+    position: relative
+}
+
+.kpi {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-left: 6px solid var(--blue);
+    border-radius: 10px;
+    padding: 18px 22px
+}
+
+.kpi b {
+    display: block;
+    font-size: 2rem;
+    color: var(--navy);
+    line-height: 1.1
+}
+
+.kpi span {
+    color: var(--mute);
+    font-size: .95rem
+}
+
+.kpi.al {
+    border-left-color: var(--warn)
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 22px
+}
+
+.car {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden
+}
+
+.car img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 340/160;
+    object-fit: cover
+}
+
+.car div {
+    padding: 16px 20px 20px
+}
+
+.car h3 {
+    color: var(--navy);
+    margin-bottom: 4px
+}
+
+.car p {
+    color: var(--mute);
+    font-size: .92rem;
+    margin-bottom: 10px
+}
+
+.car .btn {
+    padding: 8px 16px;
+    font-size: .9rem
+}
+
+.tabla-w {
+    overflow-x: auto;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 820px
+}
+
+th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 12px 16px;
+    font-size: .9rem;
+    font-weight: 600
+}
+
+td {
+    padding: 12px 16px;
+    border-top: 1px solid var(--line);
+    font-size: .95rem;
+    vertical-align: middle
+}
+
+tr:nth-child(even) td {
+    background: #f7faff
+}
+
+.tag {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 99px;
+    font-size: .8rem;
+    font-weight: 600;
+    background: var(--ice);
+    color: var(--blue);
+    margin: 1px 3px 1px 0
+}
+
+.est {
+    font-weight: 700
+}
+
+.est.ok {
+    color: var(--ok)
+}
+
+.est.bajo {
+    color: var(--warn)
+}
+
+.est.cero {
+    color: var(--bad)
+}
+
+.mini {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--navy);
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.mini:hover {
+    background: var(--ice)
+}
+
+.barra {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px
+}
+
+input,
+select {
+    font: inherit;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #fff;
+    color: var(--ink)
+}
+
+.barra input {
+    flex: 1;
+    min-width: 220px
+}
+
+form.alta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 12px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 10px
+}
+
+form.alta label {
+    font-size: .85rem;
+    color: var(--mute);
+    display: grid;
+    gap: 4px
+}
+
+form.alta .btn {
+    align-self: end
+}
+
+.vacio {
+    padding: 26px;
+    text-align: center;
+    color: var(--mute)
+}
+
+/* pie: el logo domina */
+.pie {
+    background: linear-gradient(100deg, var(--navy), #08224d);
+    color: #cfe0ff;
+    padding: 36px 0
+}
+
+.pie .wrap {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    flex-wrap: wrap
+}
+
+.pie img {
+    height: 96px;
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, .4))
+}
+
+.pie small {
+    display: block;
+    opacity: .8
+}
+
+.pie b {
+    color: #fff;
+    font-size: 1.05rem
+}
+
+.pie nav {
+    margin-left: auto;
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap
+}
+
+.pie nav a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+
+@media(max-width:700px) {
+    .menu {
+        margin-left: 0
+    }
+
+    .marca img {
+        height: 68px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+    * {
+        transition: none !important
+    }
+}
